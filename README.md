@@ -12,9 +12,9 @@ Uma aplicação web simples para calcular o **Índice de Massa Corporal (IMC)** 
 
 ## Tecnologias utilizadas
 
-- **HTML5** – estrutura semântica.  
-- **CSS3** – estilos e responsividade.  
-- **JavaScript** – cálculo do IMC e manipulação DOM.
+- **HTML5** > estrutura semântica.  
+- **CSS3** > estilos e responsividade.  
+- **JavaScript** > cálculo do IMC e manipulação DOM.
 
 ## Como usar
 
