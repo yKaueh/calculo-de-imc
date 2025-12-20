@@ -1,24 +1,21 @@
-var botaoCalc = document.querySelector('button#botao-calc');
+const botaoCalc = document.querySelector('#botao-calc');
 
-// Eventos
 botaoCalc.addEventListener('click', calculeOIMC);
 
-// Funções
-function calculeOIMC(){
-    let peso = document.querySelector('input#peso-v').value;
-    let altura = document.querySelector('input#altura-v').value;
+function calculeOIMC() {
+    let peso = document.querySelector('#peso-v').value.replace(',', '.');
+    let altura = document.querySelector('#altura-v').value.replace(',', '.');
 
-    peso = peso.replace(',', '.');
-    altura = altura.replace(',', '.');
+    const pesov = parseFloat(peso);
+    const alturav = parseFloat(altura);
 
-    pesov = Number.parseFloat(peso).toFixed(2);
-    alturav = Number.parseFloat(altura).toFixed(2);
-    imc = (pesov/(alturav**2)).toFixed(2);
+    const respostaIMC = document.getElementById('resp');
 
-    var respostaIMC = document.getElementById('resp');
-    if(pesov == 'NaN' || alturav == 'NaN' || imc == 'NaN'){
-        respostaIMC.innerText = `Seu IMC é: Houve problemas com a digitação.`;
-    }else{
-        respostaIMC.innerText = `Seu IMC é: ${imc.replace('.', ',')}`;
+    if (isNaN(pesov) || isNaN(alturav) || alturav === 0) {
+        respostaIMC.textContent = "Seu IMC é: Houve problemas com a digitação.";
+        return;
     }
+
+    const imc = (pesov / (alturav ** 2)).toFixed(2);
+    respostaIMC.textContent = `Seu IMC é: ${imc.replace('.', ',')}`;
 }

@@ -2,130 +2,81 @@
 <html lang="pt-br">
 
 <head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de IMC</title>
+
     <link rel="stylesheet" href="style.css">
-
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4240052386502813"
-        crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
 
 <body>
-    <header>
-        <h1>VelociCalculo</h1>
+    <header style="margin-bottom: 40px;">
+        <h1>IMC E CALCULADORA</h1>
     </header>
 
     <section>
         <div id="conteudo-imc">
             <div id="cabecalho">
-                <h1>Calculadora de IMC</h1>
-                <h2 style="color: #00bcd4;">Faça o cálculo do seu IMC aqui</h2>
+                <h2 class="titulo-calculadora">Calculadora de IMC</h2>
+                <h3 style="color: #00bcd4;">Faça o cálculo do seu IMC aqui</h3>
             </div>
 
             <div id="caixa-de-textos">
                 <div id="peso-caixa">
-                    Peso(Kg):
+                    Peso (Kg):
                     <input type="text" id="peso-v" placeholder="Ex: 53,1">
                 </div>
 
                 <div id="altura-caixa">
-                    Altura(m):
+                    Altura (m):
                     <input type="text" id="altura-v" placeholder="Ex: 1,68">
                 </div>
             </div>
 
             <div>
-                <button id="botao-calc">
-                    Calcular
-                </button>
+                <button id="botao-calc">Calcular</button>
             </div>
 
-            <div><br></div>
-            <strong>
-                <p id="resp" style="color: black; font-size: 120%;">
-                    Seu IMC é:
-                </p>
-            </strong>
+            <p id="resp" class="resposta">Seu IMC é:</p>
 
             <h2>PESO IDEAL</h2>
             <p>
-                O peso ideal para um indivíduo pode variar com base em fatores como massa muscular, densidade óssea e
-                saúde geral. No entanto, aqui estão algumas diretrizes gerais para determinar um peso ideal:
+                O peso ideal pode variar com base em fatores como massa muscular, densidade óssea e saúde geral. Aqui estão algumas diretrizes:
             </p>
 
-            <strong>
-                <table>
+            <table>
+                <thead>
                     <tr id="l1">
-                        <td>IMC</td>
-                        <td>Classificação</td>
-                        <td>Grau de obesidade</td>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                        <th>Grau de obesidade</th>
                     </tr>
-                    <tr>
-                        <td>Menor que 18,5</td>
-                        <td>Magreza</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 18,5 e 24,9</td>
-                        <td>Normal</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 25 e 29,9</td>
-                        <td>Sobrepeso</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>Entre 30 e 39,9</td>
-                        <td>Obesidade</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>40 ou mais</td>
-                        <td>Obesidade grave</td>
-                        <td>3</td>
-                    </tr>
-                </table>
-            </strong>
+                </thead>
+                <tbody>
+                    <tr><td>Menor que 18,5</td><td>Magreza</td><td>0</td></tr>
+                    <tr><td>18,5 - 24,9</td><td>Normal</td><td>0</td></tr>
+                    <tr><td>25 - 29,9</td><td>Sobrepeso</td><td>1</td></tr>
+                    <tr><td>30 - 39,9</td><td>Obesidade</td><td>2</td></tr>
+                    <tr><td>40 ou mais</td><td>Obesidade grave</td><td>3</td></tr>
+                </tbody>
+            </table>
 
-            <h2>
-                O QUE É ÍNDICE DE MASSA CORPORAL (IMC)?
-            </h2>
-            <p>
-                O IMC é uma medida de gordura corporal com base na altura e no peso. É usado para determinar se um
-                indivíduo está abaixo do peso, peso normal, sobrepeso ou obeso.
-            </p>
-            <p>
-                Para calcular o seu IMC, você pode usar a seguinte fórmula: IMC = peso (kg) / altura (m)^2
-            </p>
-            <p>
-                Você pode usar uma calculadora de IMC online como a que está em nosso site para determinar seu IMC.
-            </p>
-
-            <p>
-                <strong>É importante observar que o IMC não é uma medida perfeita e pode não ser preciso para todos. É
-                    apenas um guia e deve ser usado em conjunto com outras avaliações, como a composição corporal, para
-                    determinar a saúde geral e o seu condicionamento físico.</strong>
-            </p>
+            <h2>O QUE É ÍNDICE DE MASSA CORPORAL (IMC)?</h2>
+            <p>O IMC é uma medida de gordura corporal baseada em altura e peso. Serve para indicar se o indivíduo está abaixo do peso, no peso normal, com sobrepeso ou obeso.</p>
+            <p>Fórmula: <strong>IMC = peso (kg) / altura (m)²</strong></p>
+            <p>Use nossa calculadora para determinar seu IMC.</p>
+            <p><strong>Observação:</strong> O IMC não é perfeito e pode não refletir a composição corporal. É apenas um guia geral.</p>
         </div>
     </section>
 
     <footer>
-        <ul type="none">
-            <p>Caso tenha gostado, faça uma colaboração para meu trabalho!</p>
-            <li>Pix ou outros métodos: <strong><a href="https://www.vakinha.com.br/3436807" rel="external"
-                        target="_blank">https://www.vakinha.com.br/3436807</a></strong></li>
-        </ul>
         <p style="text-align: center;"><strong>&copy; 2023 Kauê K.</strong></p>
     </footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
