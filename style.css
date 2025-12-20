@@ -70,8 +70,10 @@ header {
 
 #conteudo-imc input:focus {
     border-color: orange;
-    background-color: #ffff99; /* amarelo ao selecionar */
+    outline: orange;
+    background-color: #ffff99;
 }
+
 
 /* Botão */
 #botao-calc {
